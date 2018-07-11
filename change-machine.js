@@ -22,6 +22,6 @@ let remainderAfterNickels = Math.floor( remainderAfterDimes % 5);
 let Pennies = Math.floor( remainderAfterNickels / 1);
 console.log("Your amount in Pennies = " + Pennies);
 
-console.log("This is your total amount converted into COINS!!");
+console.log("This is your total amount converted into COINS!!"); 
 
 console.log("________________________________________________________________________________________");
