@@ -16,12 +16,10 @@ if(enterHouse === "y" || enterHouse === "yes") {
     console.log("There are hands playing on the piano and ONLY hands");
     console.log("Where is the owner of these hands? *you hear something behind you*");
 }
-      let turnAround = readline.question ("will you choose to turn around?");
-      if (turnAround === "y" || turnAround === "yes"){
-        console.log("You have died!!!");
-      } else {
-
-      }
+    let turnAround = readline.question ("will you choose to turn around?");
+    if (turnAround === "y" || turnAround === "yes"){
+    console.log("You have died!!!");
+    } else {}
 
 console.log("_______________________________________________________________________");
 console.log("Thanks for playing!");
