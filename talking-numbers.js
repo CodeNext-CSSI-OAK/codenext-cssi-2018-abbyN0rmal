@@ -1,4 +1,4 @@
-// Author: FirstName LastName
+// Author: Abby Guerrero
 var readline = require("readline-sync");
 
 /******************************************************************************
@@ -7,10 +7,18 @@ var readline = require("readline-sync");
   Prints a simple greeting. Be as creative as you want here. Be sure to include
   your name as the author!
 *******************************************************************************/
-
 function printGreeting() {
+console.log(
+`
+******************************************************************************
+                                  Hello, Welcome!
+                                  By: Abby Guerrero
+                          This is a Talking Number maching
 
+*******************************************************************************
+`);
 }
+
 
 /******************************************************************************
   This function takes a number between 1 and 9 (inclusive) as input and returns
@@ -23,6 +31,27 @@ function printGreeting() {
   sayZeroNine(13) → ""
 *******************************************************************************/
 function sayZeroNine(num) {
+  if (num < 1 || num > 9){
+    return "" ;
+  } else if (1 === num) {
+    return "one";
+  } else if (2 === num){
+    return "two";
+  } else if (3 === num){
+    return "three";
+  } else if (4 === num){
+    return "four";
+  } else if (5 === num){
+    return "five";
+  } else if (6 === num){
+    return "six";
+  } else if (7 === num){
+    return "seven";
+  } else if (8 === num){
+    return "eight";
+  } else {
+    return "nine";
+  }
 
 }
 
@@ -37,6 +66,28 @@ function sayZeroNine(num) {
   sayTenNineteen(25) → ""
 *******************************************************************************/
 function sayTenNineteen(num) {
+//let num = Number(readline.question ("enter a number between 10 and 19"));
+if (num < 10 || num > 19){
+  return "" ;
+} else if (11 === num) {
+  return "eleven";
+} else if (12 === num){
+  return "twelve";
+} else if (13 === num){
+  return "thirteen";
+} else if (14 === num){
+  return "fourteen";
+} else if (15 === num){
+  return "fifteen";
+} else if (16 === num){
+  return "sixteen";
+} else if (17 === num){
+  return "seventeen";
+} else if (18 === num){
+  return "eighteen";
+} else {
+  return "nineteen";
+}
 
 }
 
@@ -51,7 +102,27 @@ function sayTenNineteen(num) {
   sayTwentyNinety(1) → ""
 *******************************************************************************/
 function sayTwentyNinety(num) {
-
+  if (num < 20 || num > 29){
+    return "" ;
+  } else if (21 === num) {
+    return "twentyone ";
+  } else if (22 === num){
+    return "twentytwo";
+  } else if (23 === num){
+    return "twentythree";
+  } else if (24 === num){
+    return "twentyfour";
+  } else if (25 === num){
+    return "twentyfive";
+  } else if (26 === num){
+    return "twentysix";
+  } else if (27 === num){
+    return "twentyseven";
+  } else if (28 === num){
+    return "twentyeight";
+  } else {
+    return "twentynine";
+  }
 }
 
 /******************************************************************************
@@ -87,7 +158,11 @@ function sayNumber(num) {
   number in word form.
 *******************************************************************************/
 function run() {
-
+printGreeting();
+let amountN = Number ( readline.question("enter a number~"));
+console.log(sayZeroNine(amountN));
+console.log(sayTenNineteen(amountN));
+console.log(sayTwentyNinety(amountN));
 }
 
 // Run the program!
