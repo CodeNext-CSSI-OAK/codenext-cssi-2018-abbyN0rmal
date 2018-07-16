@@ -149,7 +149,32 @@ function sayTwentyNinety(num) {
   sayNumber(75) → "seventy-five"
 *******************************************************************************/
 function sayNumber(num) {
-
+  let wordForm = "" ;
+  if(num === 0) {
+    wordForm = "zero";
+  } else {
+    let one = num % 10;
+    let tens = Math.floor(num / 10) % 10;
+    let hundreds = Math.floor(num / 100) % 10;
+    let thousands = Math.floor(num / 1000);
+    if (thousands > 0){
+      wordForm += sayZeroNine(thousands) + "-thousand";
+    }
+    if (hundred > 0) {
+      wordForm += sayZeroNine(hundreds) + "-hundred" ;
+    }
+    if (tens === 1) {
+      wordForm += sayTenNineteen(10 + ones) ;
+    } else {
+      if (ones > 0 && tens !== 1 ){
+        if (tens >= 2) {
+          wordForm += "-";
+        }
+        wordForm += sayZeroNine (ones);
+      }
+    }
+  }
+  return wordForm;
 }
 
 /******************************************************************************
@@ -160,9 +185,9 @@ function sayNumber(num) {
 function run() {
 printGreeting();
 let amountN = Number ( readline.question("enter a number~"));
-console.log(sayZeroNine(amountN));
-console.log(sayTenNineteen(amountN));
-console.log(sayTwentyNinety(amountN));
+console.log("Word Form:" + sayZeroNine(amountN));
+console.log("Word Form:" + sayTenNineteen(amountN));
+console.log("Word Form:" + sayTwentyNinety(amountN));
 }
 
 // Run the program!
