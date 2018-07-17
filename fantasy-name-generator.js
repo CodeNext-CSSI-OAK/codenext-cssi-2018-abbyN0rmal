@@ -68,8 +68,8 @@ function getHonorific() {
 function run() {
  firstName = readline.question("Input your first name: "); //identify the functions like this!!
  lastName = readline.question("Input your last name: ");
- momMaidenName = readline.question("Input your mother's maiden name:");
- cityBorn = readline.question("Input the city you were born in:");
+ momMaidenName = readline.question("Input your mother's maiden name: ");
+ cityBorn = readline.question("Input the city you were born in: ");
  dreamCar = readline.question("Input your dream car: ");
  street = readline.question("Input the street you live in: ");
 
