@@ -37,11 +37,11 @@ function getNewLastName() {
 *******************************************************************************/
 
 function getTitle() {
-  //let thirdToLast = lastName.charAt (lastName.length -3);
-  //let secondToLast = lastName.charAt (lastName.length -2);
-  //let last = lastName.charAt(lastName.length -1);
-  //return thirdToLast + secondToLast + last + dreamCar.substring().toLowerCase();
-  return lastName.charAt(1) + lastName.charAt(2) + lastName.charAt(3) + dreamCar.toLowerCase();
+  let thirdToLast = lastName.charAt (lastName.length -3);
+  let secondToLast = lastName.charAt (lastName.length -2);
+  let last = lastName.charAt(lastName.length -1);
+  return last.toUpperCase() + secondToLast + thirdToLast + dreamCar.substring().toLowerCase();
+  //return lastName.charAt(1) + lastName.charAt(2) + lastName.charAt(3) + dreamCar.toLowerCase();
 }
 
 /******************************************************************************
