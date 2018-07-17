@@ -1,8 +1,8 @@
-// Author: FirstName LastName
-var readline = require("readline-sync");
+// Author: Abby Guerrero
+let readline = require("readline-sync");
 
 // global variables
-var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
+let firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
 
 /******************************************************************************
                                   getNewFirstName()
@@ -13,6 +13,7 @@ var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
 *******************************************************************************/
 
 function getNewFirstName() {
+  return firstName.substring(0,3) + lastName.substring(0,2).toLowerCase();
 
 }
 
@@ -25,7 +26,7 @@ function getNewFirstName() {
 *******************************************************************************/
 
 function getNewLastName() {
-
+  return momMaidenName.substring(0, 3) + cityBorn.substring(0, 3).toLowerCase();
 }
 
 /******************************************************************************
@@ -36,7 +37,11 @@ function getNewLastName() {
 *******************************************************************************/
 
 function getTitle() {
-
+  //let thirdToLast = lastName.charAt (lastName.length -3);
+  //let secondToLast = lastName.charAt (lastName.length -2);
+  //let last = lastName.charAt(lastName.length -1);
+  //return thirdToLast + secondToLast + last + dreamCar.substring().toLowerCase();
+  return lastName.charAt(1) + lastName.charAt(2) + lastName.charAt(3) + dreamCar.toLowerCase();
 }
 
 /******************************************************************************
@@ -47,7 +52,7 @@ function getTitle() {
 *******************************************************************************/
 
 function getHonorific() {
-
+  return getTitle() + " " + street;
 }
 
 /******************************************************************************
@@ -61,7 +66,16 @@ function getHonorific() {
 *******************************************************************************/
 
 function run() {
+ firstName = readline.question("Input your first name: "); //identify the functions like this!!
+ lastName = readline.question("Input your last name: ");
+ momMaidenName = readline.question("Input your mother's maiden name:");
+ cityBorn = readline.question("Input the city you were born in:");
+ dreamCar = readline.question("Input your dream car: ");
+ street = readline.question("Input the street you live in: ");
 
+
+ console.log(getNewFirstName() + " " + getNewLastName() + " of " + getHonorific());
+ //use this only when you're done with the functions
 }
 
 // Run the program!
