@@ -88,13 +88,27 @@ let readline = require('readline-sync');
 
 
 //banana
-function reverseString(str){
-  let reversed = "";
-  for(let i = str.length -1; i >= 0; i--) {
-    reversed += str.charAt(i);
-  }
-  return reversed;
+// function reverseString(str){
+//   let reversed = "";
+//   for(let i = str.length -1; i >= 0; i--) {
+//     reversed += str.charAt(i);
+//   }
+//   return reversed;
+// }
+//
+// console.log(reverseString('banana'));
+// console.log(reverseString('caca'))
+
+let count = 5;
+while (count>0){
+  console.log("hello");
+  count --;
 }
 
-console.log(reverseString('banana'));
-console.log(reverseString('caca'))
+
+
+let str = "ABCDE";
+for (let i = 0; i < str.length(); i++){
+  console.log("ABCDE".charAt());
+
+}

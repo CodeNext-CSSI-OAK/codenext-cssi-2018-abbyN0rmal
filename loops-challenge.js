@@ -12,9 +12,13 @@ stringTimes("Hi", 2) → "HiHi"
 stringTimes("Hi", 3) → "HiHiHi"
 stringTimes("Hi", 1) → "Hi"
 *******************************************************************************/
-
 function stringTimes(str, n) {
-
+  let greeting = "";
+while (n > 0){
+  greeting += str;
+  n --;
+ }
+ return greeting;
 }
 
 // Test this function.
@@ -32,9 +36,14 @@ countXX("abcxx") → 1
 countXX("xxx") → 2
 countXX("xxxx") → 3
 *******************************************************************************/
-
 function countXX(str) {
-
+  let count = 0;
+for(let i = 0; i < str.length -1; i++){
+  if(str.substring(i, i+2) === "xx"){
+   count ++;
+  }
+ }
+ return count;
 }
 
 // Test this function.
@@ -52,9 +61,9 @@ bobThere("abcbob") → true
 bobThere("b9b") → true
 bobThere("bac") → false
 *******************************************************************************/
-
+let
 function bobThere(str) {
-
+  
 }
 
 // Test this function.
